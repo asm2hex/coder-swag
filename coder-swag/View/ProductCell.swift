@@ -9,7 +9,13 @@
 import UIKit
 
 class ProductCell: UICollectionViewCell {
-  @IBOutlet weak var produceImageView: UIImageView!
+  @IBOutlet weak var productImageView: UIImageView!
   @IBOutlet weak var productTitleLabel: UILabel!
   @IBOutlet weak var productPriceLabel: UILabel!
+  
+  func configureCell(withProduct product: Product) {
+    productImageView.image = UIImage(named: product.imageName)
+    productTitleLabel.text = product.title
+    productPriceLabel.text = product.price
+  }
 }

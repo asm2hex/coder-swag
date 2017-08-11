@@ -90,17 +90,17 @@
                     <navigationItem key="navigationItem" title="CODER SWAG" id="oQf-tF-mwr"/>
                     <connections>
                         <outlet property="categoryTableView" destination="Qth-ft-JPT" id="Tlf-eD-fey"/>
-                        <segue destination="1S0-sc-l65" kind="show" id="h1P-Ih-Gv3"/>
+                        <segue destination="1S0-sc-l65" kind="show" identifier="ProductsVC" id="h1P-Ih-Gv3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="477.60000000000002" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="qha-R1-Mdr">
             <objects>
-                <viewController id="1S0-sc-l65" sceneMemberID="viewController">
+                <viewController id="1S0-sc-l65" customClass="ProductsVC" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HKy-Mw-4Kv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,12 +165,16 @@
                                         </constraints>
                                         <size key="customSize" width="178" height="268"/>
                                         <connections>
-                                            <outlet property="produceImageView" destination="jD3-VG-4LQ" id="YWq-vd-1ca"/>
+                                            <outlet property="productImageView" destination="jD3-VG-4LQ" id="gDv-Q1-ACE"/>
                                             <outlet property="productPriceLabel" destination="O3f-0S-6GR" id="aae-xp-opb"/>
                                             <outlet property="productTitleLabel" destination="RCf-1N-jRe" id="Sx5-7H-tDX"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1S0-sc-l65" id="AyR-eZ-toL"/>
+                                    <outlet property="delegate" destination="1S0-sc-l65" id="YsF-uM-6Tg"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
@@ -185,6 +189,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U67-gU-skx"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollectionView" destination="09h-gO-Rc0" id="11B-Ps-Bes"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbZ-Ea-fsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

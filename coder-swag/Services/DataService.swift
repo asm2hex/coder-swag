@@ -57,7 +57,7 @@ class DataService {
     case "DIGITAL":
       return getDigitalGoods()
     default:
-      break
+      return getHats()
     }
   }
   
